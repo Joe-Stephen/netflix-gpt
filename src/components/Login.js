@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
+import { checkValidateData } from "../utils/validate";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
+  const fullName = useRef(null);
+  const email = useRef(null);
+  const password = useRef(null);
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
+  };
+
+  const handleButtonClick = () => {
+    setErrorMessage(
+      checkValidateData(email.current.value, password.current.value)
+    );
   };
   return (
     <div>
@@ -17,28 +28,53 @@ const Login = () => {
           alt="background-image"
         />
       </div>
-      <form className="w-3/12 absolute mt-36 mx-auto right-0 left-0 p-12 bg-black bg-opacity-80 text-white rounded-lg">
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="w-3/12 absolute mt-36 mx-auto right-0 left-0 p-12 bg-black bg-opacity-80 text-white rounded-lg"
+      >
         <h1 className="font-bold text-3xl">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
           <input
+            ref={fullName}
             type="text"
             placeholder="Full Name"
             className="py-4 my-3 w-full bg-gray-700 bg-opacity-70 border-2 border-gray-500 rounded-md"
           />
         )}
+        {errorMessage && errorMessage === "Name is not valid" ? (
+          <p className="text-red-500 font-medium text-sm">{errorMessage}</p>
+        ) : (
+          ""
+        )}
         <input
+          ref={email}
           type="text"
           placeholder="Email Address"
           className="py-4 my-3 w-full bg-gray-700 bg-opacity-70 border-2 border-gray-500 rounded-md"
         />
+        {errorMessage && errorMessage === "Email ID is not valid" ? (
+          <p className="text-red-500 font-medium text-sm">{errorMessage}</p>
+        ) : (
+          ""
+        )}
         <input
+          ref={password}
           type="password"
           placeholder="Password"
           className="py-4 my-3 w-full bg-gray-700 bg-opacity-70 border-2 border-gray-500 rounded-md"
         />
-        <button className="py-4 my-2 bg-red-700 w-full rounded-lg">
+        {errorMessage && errorMessage === "Password is not valid" ? (
+          <p className="text-red-500 font-medium text-sm">{errorMessage}</p>
+        ) : (
+          ""
+        )}
+
+        <button
+          className="py-4 my-2 bg-red-700 w-full rounded-lg"
+          onClick={handleButtonClick}
+        >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
         <p className="py-2 cursor-pointer" onClick={toggleSignInForm}>

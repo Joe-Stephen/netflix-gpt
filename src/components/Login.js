@@ -15,7 +15,11 @@ const Login = () => {
 
   const handleButtonClick = () => {
     setErrorMessage(
-      checkValidateData(email.current.value, password.current.value)
+      checkValidateData(
+        fullName.current.value.trim(),
+        email.current.value.trim(),
+        password.current.value.trim()
+      )
     );
   };
   return (

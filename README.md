@@ -9,7 +9,9 @@
 -useRef Hook
 -Firebase Setup
 -Deploying app to production
--Create SignUp User Account
+-Created SignUp User Account
+-Created SignIn User Account
+-Redux store is set up
 
 # Features
 -Login/Sign Up

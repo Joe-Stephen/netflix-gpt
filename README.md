@@ -18,6 +18,8 @@
 -Bug fix: Redirection according to user state.
 -Bug fix: Unsubscribe from the onAuthStateChanged callback.
 -Constants file is set up.
+-TMDB is set up.
+-Got data from TMDB now playing movies list API
 # Features
 -Login/Sign Up
   -Sign In/Sign Up Form

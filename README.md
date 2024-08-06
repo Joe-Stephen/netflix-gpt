@@ -14,6 +14,9 @@
 -Redux store is set up
 -Implemented Signout
 -Update profile
+-Bug fix: Populating user data.
+-Bug fix: Redirection according to user state.
+-Bug fix: Unsubscribe from the onAuthStateChanged callback.
 
 # Features
 -Login/Sign Up

@@ -12,6 +12,8 @@
 -Created SignUp User Account
 -Created SignIn User Account
 -Redux store is set up
+-Implemented Signout
+-Update profile
 
 # Features
 -Login/Sign Up

@@ -8,9 +8,12 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import { addUser } from "../utils/userSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
   const fullName = useRef(null);
@@ -44,6 +47,15 @@ const Login = () => {
             photoURL: "https://avatars.githubusercontent.com/u/142229381?v=4",
           })
             .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
               console.log("user signed up :", user);
               navigate("/browse");
             })
@@ -127,7 +139,7 @@ const Login = () => {
         {errorMessage && errorMessage === "Password is not valid" ? (
           <p className="text-red-500 font-medium text-sm">{errorMessage}</p>
         ) : (
-          ""
+          <p className="text-red-500 font-medium text-sm">{errorMessage}</p>
         )}
 
         <button

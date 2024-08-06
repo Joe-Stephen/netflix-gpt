@@ -24,15 +24,18 @@ const Header = () => {
         src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
         alt="logo"
       />
-      <div className="grid p-4">
-        <img className="w-10 h-10" src={user.photoURL} alt="usericon"></img>
-        <h3>{user.displayName}</h3>
-        <button onClick={handlesignOut} className="font-bold text-white">
-          (Sign Out)
-        </button>
-      </div>
+      {user && (
+        <div className="grid p-4">
+          <img className="w-10 h-10" src={user?.photoURL} alt="usericon"></img>
+          <h3>{user?.displayName}</h3>
+          <button onClick={handlesignOut} className="font-bold text-white">
+            (Sign Out)
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Header;
+  

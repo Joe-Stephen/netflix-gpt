@@ -14,11 +14,11 @@
 -Redux store is set up
 -Implemented Signout
 -Update profile
--Bug fix: Populating user data.
--Bug fix: Redirection according to user state.
--Bug fix: Unsubscribe from the onAuthStateChanged callback.
--Constants file is set up.
--TMDB is set up.
+-Bug fix: Populating user data 
+-Bug fix: Redirection according to user state
+-Bug fix: Unsubscribe from the onAuthStateChanged callback
+-Constants file is set up
+-TMDB is set up
 -Got data from TMDB now playing movies list API
 -Custom hook for now playing movies
 -Custom hook for trailer video
@@ -30,7 +30,14 @@
 -Embedded trailer video from YouTube in the background
 -Used Tailwind css to style MainContainer
 -Added react-icons to project
-
+-Build SecondaryContainer
+-Build the MovieList
+-Build the MovieCard
+-Added TMDB image cdb url
+-Used Tailwind css to style the Browse page
+-Completed usePopularMovies custom hook
+-Completed useTopRatedMovies custom hook
+-Completed useUpcomingMovies custom hook 
 
 # Features
 -Login/Sign Up

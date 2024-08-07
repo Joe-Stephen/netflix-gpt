@@ -20,6 +20,18 @@
 -Constants file is set up.
 -TMDB is set up.
 -Got data from TMDB now playing movies list API
+-Custom hook for now playing movies
+-Custom hook for trailer video
+-Created movies slice
+-Updated store with movies data
+-Planning for MainContainer and SecondaryContainer
+-Fetched data for trailer video
+-Updated store with trailer video
+-Embedded trailer video from YouTube in the background
+-Used Tailwind css to style MainContainer
+-Added react-icons to project
+
+
 # Features
 -Login/Sign Up
   -Sign In/Sign Up Form

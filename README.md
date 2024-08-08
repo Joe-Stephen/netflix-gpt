@@ -37,7 +37,8 @@
 -Used Tailwind css to style the Browse page
 -Completed usePopularMovies custom hook
 -Completed useTopRatedMovies custom hook
--Completed useUpcomingMovies custom hook 
+-Completed useUpcomingMovies custom hook
+-GPT search feature
 
 # Features
 -Login/Sign Up

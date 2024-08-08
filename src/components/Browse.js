@@ -6,10 +6,8 @@ import SecondaryContainer from "./SecondaryContainer";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import GptSearch from "./GptSearch";
-import { useState } from "react";
 
 const Browse = () => {
-  const [isGpt, setIsGpt] = useState(false);
   useNowPlayingMovies();
   usePopularMovies();
   useTopRatedMovies();

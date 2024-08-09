@@ -39,6 +39,9 @@
 -Completed useTopRatedMovies custom hook
 -Completed useUpcomingMovies custom hook
 -GPT search feature
+-Created GPT search slice
+-Completed toggle between GPT search and main pages
+-Completed conditional rendering based on the toggleGptSearch button
 
 # Features
 -Login/Sign Up

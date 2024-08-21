@@ -26,3 +26,7 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+export const GPT_QUERY_PREFIX =
+  "Act as a movie recommendation system and suggest some movies for the query : ";
+export const GPT_QUERY_POSTFIX =
+  ". Only give me the names of five 10 movies, comma separated like the example given ahead. Example : Interstellar, Avengers, Ironman, Big Hero 6, Avengers Endgame.";

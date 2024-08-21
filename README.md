@@ -42,6 +42,9 @@
 -Created GPT search slice
 -Completed toggle between GPT search and main pages
 -Completed conditional rendering based on the toggleGptSearch button
+-GPT search page added
+-Completed GPT search bar component.
+-Implemented multilingual feature.
 
 # Features
 -Login/Sign Up
